@@ -1,0 +1,92 @@
+{
+  // k4_guilds — in-game runtime for the site-owned clans_* database.
+  // The website (vcs2.ru/clans2) owns clans, membership, roles, requests, settings, services,
+  // levels and logs. This config only covers the runtime part.
+
+  "commands": {
+    // Old core.ini aliases. "!" and "/" are s2sdk's configured chat triggers; ".clan" is caught
+    // by the plugin's own say/say_team listener.
+    "chat_aliases": ["!clan", "/clan", ".clan", "!clans"],
+    "console_aliases": ["clans", "clan_menu"]
+  },
+
+  // Old kill_rewards.ini. The site displays clans_main.bank and spends it on services.
+  "kill_rewards": {
+    "kill_reward": 3,
+    "death_penalty": 2,
+    "ignore_warmup": true,
+    // Recommended: a teamkill pays no clan-bank reward and counts no kill.
+    "ignore_same_team": true,
+    // Optional extra rule: also suppress the reward for clanmates on opposite teams.
+    "ignore_same_clan": false,
+    // Bots have no SteamID and no clan: by default a death a bot took part in changes nothing
+    // (neither the killer's bank/kills nor the human victim's bank/deaths). true restores the
+    // old per-participant behaviour.
+    "count_bots": false
+  },
+
+  "membership": {
+    // The site may kick/accept/change roles at any time; reload the cache this often.
+    "refresh_seconds": 30
+  },
+
+  "guild": {
+    // Clan tag on the scoreboard (old plugin behaviour; phrase ClanTag_Format).
+    // Live-check CCSPlayerController::m_szClan on the current build.
+    "show_tag_on_scoreboard": true,
+    "scoreboard_refresh_seconds": 60
+  },
+
+  // In-game invites (in-memory only; no site counterpart). The invitee gets an accept/decline
+  // menu; invites expire and the sender has a small cooldown.
+  "invites": {
+    "expire_seconds": 60,
+    "cooldown_seconds": 10
+  },
+
+  // Old top.ini (game-side read-only tops).
+  "top": {
+    "enable_bank": false,
+    "enable_exp": true,
+    "enable_kills": true,
+    "enable_deaths": true
+  },
+
+  // Effective slots/roles = base + purchases * step (Clans.php:361-377). Live services/items.json:
+  // slots value 10 (price 100, multiplier 1.5, max 10), roles value 3 (same price/mult/max).
+  // Purchases are site-only; the plugin uses the steps for display and SQL slot guards.
+  "services": {
+    "slots_step": 10,
+    "roles_step": 3
+  },
+
+  // Site logs.php gate (live values: master switch off, delete_logs off, per-action flags on).
+  // The plugin writes clans_logs only when "on" is true AND the action's flag is true; with the
+  // defaults below it writes nothing. "delete_logs" controls whether a disband removes them.
+  "logs": {
+    "on": false,
+    "delete_logs": false,
+    "join": true,
+    "request": true,
+    "exit": true,
+    "kick": true,
+    "request_accept": true,
+    "request_cancel": true
+  },
+
+  "chat": {
+    // Runtime-only guild chat (/gc, /clan chat); writes nothing to the database.
+    "guild_chat": true
+  },
+
+  // Copy of the live site's levels.json (6 levels by clans_main.exp). Null site names are shown
+  // in game as the localized "Level N"/"Уровень N". Keep it in sync with the site.
+  "levels": [
+    {"id": 1, "exp": 0},
+    {"id": 2, "exp": 1000},
+    {"id": 3, "exp": 2000},
+    {"id": 4, "exp": 3000},
+    {"id": 5, "exp": 4000},
+    {"id": 6, "name": "Legend", "exp": 5000}
+  ]
+}

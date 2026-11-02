@@ -1,0 +1,698 @@
+"Phrases"
+{
+	// In-game runtime: read-only text commands, the clan menu and its results (ru + en).
+
+	// The CS2 scoreboard renders m_szClan inside brackets itself, so the default format adds no
+	// wrapper of its own. A site tag that stores one ("[ADM]") is unwrapped before this format
+	// is applied (see k4::FormatClanTagText).
+	"ClanTag_Format"
+	{
+		"en"	"{1}"
+		"ru"	"{1}"
+	}
+
+	"k4.general.prefix"
+	{
+		"en"	"{GRAY}[ {LIME}Clans {GRAY}]"
+		"ru"	"{GRAY}[ {LIME}Кланы {GRAY}]"
+	}
+
+	"k4.command.error.player_only"
+	{
+		"en"	"{LIGHTRED}This command can only be used by a player."
+		"ru"	"{LIGHTRED}Команда доступна только игроку."
+	}
+	"k4.command.chat.disabled"
+	{
+		"en"	"{LIGHTRED}Guild chat is disabled on this server."
+		"ru"	"{LIGHTRED}Клановый чат отключён."
+	}
+	"k4.command.error.too_fast"
+	{
+		"en"	"{LIGHTRED}Please wait a moment before using this command again."
+		"ru"	"{LIGHTRED}Подождите немного перед повторной командой."
+	}
+	"k4.command.usage.gc"
+	{
+		"en"	"{GRAY}Usage: {LIME}!gc <message>"
+		"ru"	"{GRAY}Использование: {LIME}!gc <сообщение>"
+	}
+
+	"k4.command.help.header"
+	{
+		"en"	"{LIME}=== Clan Commands"
+		"ru"	"{LIME}=== Команды клана"
+	}
+	"k4.command.help.info"
+	{
+		"en"	"{GRAY}> {OLIVE}!clan info{GRAY} - Your clan: members, bank, level"
+		"ru"	"{GRAY}> {OLIVE}!clan info{GRAY} - Клан: участники, банк, уровень"
+	}
+	"k4.command.help.members"
+	{
+		"en"	"{GRAY}> {OLIVE}!clan members{GRAY} - Clan member list"
+		"ru"	"{GRAY}> {OLIVE}!clan members{GRAY} - Список участников"
+	}
+	"k4.command.help.top"
+	{
+		"en"	"{GRAY}> {OLIVE}!clan top <bank|exp|kills|deaths>{GRAY} - Clan tops"
+		"ru"	"{GRAY}> {OLIVE}!clan top <bank|exp|kills|deaths>{GRAY} - Топы кланов"
+	}
+	"k4.command.help.chat"
+	{
+		"en"	"{GRAY}> {OLIVE}!gc <message>{GRAY} - Guild chat"
+		"ru"	"{GRAY}> {OLIVE}!gc <сообщение>{GRAY} - Клановый чат"
+	}
+	"k4.command.help.footer"
+	{
+		"en"	"{LIME}==="
+		"ru"	"{LIME}==="
+	}
+
+	"k4.command.info.header"
+	{
+		"en"	"{LIME}=== {1} [{2}]"
+		"ru"	"{LIME}=== {1} [{2}]"
+	}
+	"k4.command.info.members"
+	{
+		"en"	"{GRAY}> {GRAY}Members: {LIME}{1}{GRAY}/{LIME}{2}"
+		"ru"	"{GRAY}> {GRAY}Участники: {LIME}{1}{GRAY}/{LIME}{2}"
+	}
+	"k4.command.info.bank"
+	{
+		"en"	"{GRAY}> {GRAY}Bank: {LIGHTOLIVE}{1}"
+		"ru"	"{GRAY}> {GRAY}Банк: {LIGHTOLIVE}{1}"
+	}
+	"k4.command.info.type"
+	{
+		"en"	"{GRAY}> {GRAY}Type: {LIME}{1}"
+		"ru"	"{GRAY}> {GRAY}Тип: {LIME}{1}"
+	}
+	"k4.command.info.exp"
+	{
+		"en"	"{GRAY}> {GRAY}Experience: {LIME}{1} XP"
+		"ru"	"{GRAY}> {GRAY}Опыт: {LIME}{1} XP"
+	}
+	"k4.command.info.level"
+	{
+		"en"	"{GRAY}> {GRAY}Level: {LIME}{1}{GRAY} ({2}%)"
+		"ru"	"{GRAY}> {GRAY}Уровень: {LIME}{1}{GRAY} ({2}%)"
+	}
+	"k4.command.info.role"
+	{
+		"en"	"{GRAY}> {GRAY}Your role: {LIME}{1}"
+		"ru"	"{GRAY}> {GRAY}Ваша роль: {LIME}{1}"
+	}
+	"k4.command.info.footer"
+	{
+		"en"	"{LIME}==="
+		"ru"	"{LIME}==="
+	}
+
+	"k4.command.members.header"
+	{
+		"en"	"{LIME}=== Clan Members"
+		"ru"	"{LIME}=== Участники клана"
+	}
+	"k4.command.members.item"
+	{
+		"en"	"{GRAY}> {GRAY}{1} {GRAY}({2}) - K/D {LIME}{3}{GRAY}/{LIME}{4} {5}"
+		"ru"	"{GRAY}> {GRAY}{1} {GRAY}({2}) - У/С {LIME}{3}{GRAY}/{LIME}{4} {5}"
+	}
+	"k4.command.members.online"
+	{
+		"en"	"{LIME}[online]"
+		"ru"	"{LIME}[в игре]"
+	}
+	"k4.command.members.footer"
+	{
+		"en"	"{LIME}=== {GRAY}{1}/{2} online"
+		"ru"	"{LIME}=== {GRAY}{1}/{2} в игре"
+	}
+
+	"k4.command.top.header"
+	{
+		"en"	"{LIME}=== Clan Top: {1}"
+		"ru"	"{LIME}=== Топ кланов: {1}"
+	}
+	"k4.command.top.item"
+	{
+		"en"	"{GRAY}> #{1} {2} - {LIGHTOLIVE}{3}"
+		"ru"	"{GRAY}> #{1} {2} - {LIGHTOLIVE}{3}"
+	}
+	"k4.command.top.empty"
+	{
+		"en"	"{GRAY}> No data."
+		"ru"	"{GRAY}> Нет данных."
+	}
+	"k4.command.top.footer"
+	{
+		"en"	"{LIME}==="
+		"ru"	"{LIME}==="
+	}
+	"k4.command.top.usage"
+	{
+		"en"	"{GRAY}Usage: {LIME}!clan top <bank|exp|kills|deaths>"
+		"ru"	"{GRAY}Использование: {LIME}!clan top <bank|exp|kills|deaths>"
+	}
+	"k4.command.top.disabled"
+	{
+		"en"	"{LIGHTRED}This top is disabled."
+		"ru"	"{LIGHTRED}Этот топ отключён."
+	}
+
+	"k4.guild.error.not_in_guild"
+	{
+		"en"	"{LIGHTRED}You are not in a clan."
+		"ru"	"{LIGHTRED}Вы не состоите в клане."
+	}
+
+	"k4.chat.format"
+	{
+		"en"	"{GRAY}[{LIME}{1}{GRAY}] {GRAY}{2}{GRAY}: {WHITE}{3}"
+		"ru"	"{GRAY}[{LIME}{1}{GRAY}] {GRAY}{2}{GRAY}: {WHITE}{3}"
+	}
+
+	// --- menu ------------------------------------------------------------------------------
+	"k4.menu.title.main"
+	{
+		"en"	"{LIME}Clans"
+		"ru"	"{LIME}Кланы"
+	}
+	"k4.menu.title.clan"
+	{
+		"en"	"{LIME}Clan [{1}]"
+		"ru"	"{LIME}Клан [{1}]"
+	}
+	"k4.menu.title.clans"
+	{
+		"en"	"{LIME}All clans"
+		"ru"	"{LIME}Все кланы"
+	}
+	"k4.menu.title.info"
+	{
+		"en"	"{LIME}Clan information"
+		"ru"	"{LIME}Информация о клане"
+	}
+	"k4.menu.title.members"
+	{
+		"en"	"{LIME}Members"
+		"ru"	"{LIME}Участники"
+	}
+	"k4.menu.title.top"
+	{
+		"en"	"{LIME}Top clans"
+		"ru"	"{LIME}Топ кланов"
+	}
+	"k4.menu.title.management"
+	{
+		"en"	"{LIME}Management"
+		"ru"	"{LIME}Управление"
+	}
+	"k4.menu.title.invite"
+	{
+		"en"	"{LIME}Invite a player"
+		"ru"	"{LIME}Пригласить игрока"
+	}
+	"k4.menu.title.kick"
+	{
+		"en"	"{LIME}Kick a member"
+		"ru"	"{LIME}Исключить участника"
+	}
+	"k4.menu.title.requests"
+	{
+		"en"	"{LIME}Join requests"
+		"ru"	"{LIME}Заявки на вступление"
+	}
+	"k4.menu.title.request"
+	{
+		"en"	"{LIME}Request"
+		"ru"	"{LIME}Заявка"
+	}
+	"k4.menu.title.invite_prompt"
+	{
+		"en"	"{LIME}Invite to {1} [{2}]"
+		"ru"	"{LIME}Приглашение в {1} [{2}]"
+	}
+
+	"k4.menu.item.info"
+	{
+		"en"	"{WHITE}Clan information"
+		"ru"	"{WHITE}Информация о клане"
+	}
+	"k4.menu.item.members"
+	{
+		"en"	"{WHITE}Members"
+		"ru"	"{WHITE}Участники"
+	}
+	"k4.menu.item.top_clans"
+	{
+		"en"	"{WHITE}Top clans"
+		"ru"	"{WHITE}Топ кланов"
+	}
+	"k4.menu.item.management"
+	{
+		"en"	"{WHITE}Management"
+		"ru"	"{WHITE}Управление"
+	}
+	"k4.menu.item.leave"
+	{
+		"en"	"{LIGHTRED}Leave clan"
+		"ru"	"{LIGHTRED}Покинуть клан"
+	}
+	"k4.menu.item.owner_stays"
+	{
+		"en"	"{GRAY}Owner cannot leave"
+		"ru"	"{GRAY}Владелец не может выйти"
+	}
+	"k4.menu.item.clans"
+	{
+		"en"	"{WHITE}Clan list"
+		"ru"	"{WHITE}Список кланов"
+	}
+	"k4.menu.item.pending_invite"
+	{
+		"en"	"{GREEN}Pending invite (accept/decline)"
+		"ru"	"{GREEN}Есть приглашение (принять/отклонить)"
+	}
+	"k4.menu.item.join"
+	{
+		"en"	"{GREEN}Join clan"
+		"ru"	"{GREEN}Вступить в клан"
+	}
+	"k4.menu.item.apply"
+	{
+		"en"	"{GREEN}Send join request"
+		"ru"	"{GREEN}Отправить заявку"
+	}
+	"k4.menu.item.cancel_request"
+	{
+		"en"	"{LIGHTRED}Cancel my request"
+		"ru"	"{LIGHTRED}Отменить заявку"
+	}
+	"k4.menu.item.invite_only"
+	{
+		"en"	"{GRAY}Invite only"
+		"ru"	"{GRAY}Только по приглашению"
+	}
+	"k4.menu.item.invite"
+	{
+		"en"	"{WHITE}Invite a player"
+		"ru"	"{WHITE}Пригласить игрока"
+	}
+	"k4.menu.item.kick"
+	{
+		"en"	"{WHITE}Kick a member"
+		"ru"	"{WHITE}Исключить участника"
+	}
+	"k4.menu.item.requests"
+	{
+		"en"	"{WHITE}Join requests"
+		"ru"	"{WHITE}Заявки"
+	}
+	"k4.menu.item.disband"
+	{
+		"en"	"{LIGHTRED}Disband clan"
+		"ru"	"{LIGHTRED}Распустить клан"
+	}
+	"k4.menu.item.accept"
+	{
+		"en"	"{GREEN}Accept"
+		"ru"	"{GREEN}Принять"
+	}
+	"k4.menu.item.decline"
+	{
+		"en"	"{LIGHTRED}Decline"
+		"ru"	"{LIGHTRED}Отклонить"
+	}
+	"k4.menu.item.yes"
+	{
+		"en"	"{GREEN}Yes"
+		"ru"	"{GREEN}Да"
+	}
+	"k4.menu.item.no"
+	{
+		"en"	"{LIGHTRED}No"
+		"ru"	"{LIGHTRED}Нет"
+	}
+	"k4.menu.item.back"
+	{
+		"en"	"{GRAY}Back"
+		"ru"	"{GRAY}Назад"
+	}
+	"k4.menu.item.no_players"
+	{
+		"en"	"{GRAY}No players available"
+		"ru"	"{GRAY}Нет доступных игроков"
+	}
+	"k4.menu.item.no_members"
+	{
+		"en"	"{GRAY}No members to manage"
+		"ru"	"{GRAY}Нет участников для управления"
+	}
+	"k4.menu.item.no_requests"
+	{
+		"en"	"{GRAY}No pending requests"
+		"ru"	"{GRAY}Нет заявок"
+	}
+	"k4.menu.item.no_clans"
+	{
+		"en"	"{GRAY}No clans"
+		"ru"	"{GRAY}Кланов нет"
+	}
+	"k4.menu.item.no_data"
+	{
+		"en"	"{GRAY}No data"
+		"ru"	"{GRAY}Нет данных"
+	}
+
+	"k4.menu.clans.item"
+	{
+		"en"	"{WHITE}{1} [{2}] {GRAY}{3} - {4}/{5}"
+		"ru"	"{WHITE}{1} [{2}] {GRAY}{3} - {4}/{5}"
+	}
+	"k4.menu.members.item"
+	{
+		"en"	"{WHITE}{1} {GRAY}({2})"
+		"ru"	"{WHITE}{1} {GRAY}({2})"
+	}
+	"k4.menu.requests.item"
+	{
+		"en"	"{WHITE}{1} {GRAY}({2})"
+		"ru"	"{WHITE}{1} {GRAY}({2})"
+	}
+	"k4.menu.top.item"
+	{
+		"en"	"{GRAY}#{1} {WHITE}{2} - {LIGHTOLIVE}{3}"
+		"ru"	"{GRAY}#{1} {WHITE}{2} - {LIGHTOLIVE}{3}"
+	}
+
+	"k4.menu.level.default"
+	{
+		"en"	"Level {1}"
+		"ru"	"Уровень {1}"
+	}
+
+	"k4.menu.type.open"
+	{
+		"en"	"open"
+		"ru"	"открытый"
+	}
+	"k4.menu.type.inviteonly"
+	{
+		"en"	"invite only"
+		"ru"	"по приглашению"
+	}
+	"k4.menu.type.request"
+	{
+		"en"	"by request"
+		"ru"	"по заявкам"
+	}
+	"k4.menu.type.unknown"
+	{
+		"en"	"unknown"
+		"ru"	"неизвестно"
+	}
+
+	"k4.menu.top.exp"
+	{
+		"en"	"{WHITE}Top by experience"
+		"ru"	"{WHITE}Топ по опыту"
+	}
+	"k4.menu.top.bank"
+	{
+		"en"	"{WHITE}Top by bank"
+		"ru"	"{WHITE}Топ по банку"
+	}
+	"k4.menu.top.kills"
+	{
+		"en"	"{WHITE}Top by kills"
+		"ru"	"{WHITE}Топ по убийствам"
+	}
+	"k4.menu.top.deaths"
+	{
+		"en"	"{WHITE}Top by deaths"
+		"ru"	"{WHITE}Топ по смертям"
+	}
+
+	"k4.menu.info.name"
+	{
+		"en"	"{GRAY}Name: {WHITE}{1} [{2}]"
+		"ru"	"{GRAY}Название: {WHITE}{1} [{2}]"
+	}
+	"k4.menu.info.type"
+	{
+		"en"	"{GRAY}Type: {WHITE}{1}"
+		"ru"	"{GRAY}Тип: {WHITE}{1}"
+	}
+	"k4.menu.info.level"
+	{
+		"en"	"{GRAY}Experience: {WHITE}{1} XP {GRAY}({2}, {3}%)"
+		"ru"	"{GRAY}Опыт: {WHITE}{1} XP {GRAY}({2}, {3}%)"
+	}
+	"k4.menu.info.bank"
+	{
+		"en"	"{GRAY}Bank: {LIGHTOLIVE}{1}"
+		"ru"	"{GRAY}Банк: {LIGHTOLIVE}{1}"
+	}
+	"k4.menu.info.slots"
+	{
+		"en"	"{GRAY}Slots: {WHITE}{1}/{2}"
+		"ru"	"{GRAY}Слоты: {WHITE}{1}/{2}"
+	}
+	"k4.menu.info.owner"
+	{
+		"en"	"{GRAY}Owner: {WHITE}{1}"
+		"ru"	"{GRAY}Владелец: {WHITE}{1}"
+	}
+	"k4.menu.info.created"
+	{
+		"en"	"{GRAY}Created: {WHITE}{1}"
+		"ru"	"{GRAY}Создан: {WHITE}{1}"
+	}
+
+	"k4.menu.member.role"
+	{
+		"en"	"{GRAY}Role: {WHITE}{1}"
+		"ru"	"{GRAY}Роль: {WHITE}{1}"
+	}
+	"k4.menu.member.kills"
+	{
+		"en"	"{GRAY}Kills: {WHITE}{1}"
+		"ru"	"{GRAY}Убийства: {WHITE}{1}"
+	}
+	"k4.menu.member.deaths"
+	{
+		"en"	"{GRAY}Deaths: {WHITE}{1}"
+		"ru"	"{GRAY}Смерти: {WHITE}{1}"
+	}
+	"k4.menu.member.joined"
+	{
+		"en"	"{GRAY}Joined: {WHITE}{1}"
+		"ru"	"{GRAY}В клане с: {WHITE}{1}"
+	}
+	"k4.menu.member.last_seen"
+	{
+		"en"	"{GRAY}Last seen: {WHITE}{1}"
+		"ru"	"{GRAY}Был в игре: {WHITE}{1}"
+	}
+
+	"k4.menu.confirm.invite"
+	{
+		"en"	"{WHITE}Invite {1} to the clan?"
+		"ru"	"{WHITE}Пригласить {1} в клан?"
+	}
+	"k4.menu.confirm.kick"
+	{
+		"en"	"{WHITE}Kick {1} from the clan?"
+		"ru"	"{WHITE}Исключить {1} из клана?"
+	}
+	"k4.menu.confirm.leave"
+	{
+		"en"	"{WHITE}Leave the clan?"
+		"ru"	"{WHITE}Покинуть клан?"
+	}
+	"k4.menu.confirm.disband1"
+	{
+		"en"	"{LIGHTRED}Disband the clan? All members will be removed."
+		"ru"	"{LIGHTRED}Распустить клан? Все участники будут удалены."
+	}
+	"k4.menu.confirm.disband2"
+	{
+		"en"	"{LIGHTRED}Are you sure? This cannot be undone."
+		"ru"	"{LIGHTRED}Вы уверены? Отменить это нельзя."
+	}
+
+	"k4.menu.error.no_rights"
+	{
+		"en"	"{LIGHTRED}You don't have the rights for this action."
+		"ru"	"{LIGHTRED}Недостаточно прав."
+	}
+	"k4.menu.error.not_in_clan"
+	{
+		"en"	"{LIGHTRED}You are not in a clan."
+		"ru"	"{LIGHTRED}Вы не состоите в клане."
+	}
+	"k4.menu.error.already_in_clan"
+	{
+		"en"	"{LIGHTRED}You are already in a clan."
+		"ru"	"{LIGHTRED}Вы уже состоите в клане."
+	}
+	"k4.menu.error.target_in_clan"
+	{
+		"en"	"{LIGHTRED}That player is already in a clan."
+		"ru"	"{LIGHTRED}Игрок уже состоит в клане."
+	}
+	"k4.menu.error.clan_full"
+	{
+		"en"	"{LIGHTRED}The clan is full."
+		"ru"	"{LIGHTRED}Клан заполнен."
+	}
+	"k4.menu.error.clan_gone"
+	{
+		"en"	"{LIGHTRED}The clan no longer exists."
+		"ru"	"{LIGHTRED}Клан больше не существует."
+	}
+	"k4.menu.error.join_failed"
+	{
+		"en"	"{LIGHTRED}The clan could not be joined."
+		"ru"	"{LIGHTRED}Не удалось вступить в клан."
+	}
+	"k4.menu.error.not_open"
+	{
+		"en"	"{LIGHTRED}This clan is not open for direct joins."
+		"ru"	"{LIGHTRED}Клан не открыт для вступления."
+	}
+	"k4.menu.error.not_request"
+	{
+		"en"	"{LIGHTRED}This clan does not accept requests."
+		"ru"	"{LIGHTRED}Клан не принимает заявки."
+	}
+	"k4.menu.error.already_requested"
+	{
+		"en"	"{LIGHTRED}You already have a pending request."
+		"ru"	"{LIGHTRED}У вас уже есть заявка."
+	}
+	"k4.menu.error.no_request"
+	{
+		"en"	"{LIGHTRED}You have no pending request."
+		"ru"	"{LIGHTRED}У вас нет заявки."
+	}
+	"k4.menu.error.request_gone"
+	{
+		"en"	"{LIGHTRED}That request is no longer available."
+		"ru"	"{LIGHTRED}Заявка больше недоступна."
+	}
+	"k4.menu.error.player_left"
+	{
+		"en"	"{LIGHTRED}The player is no longer available."
+		"ru"	"{LIGHTRED}Игрок больше недоступен."
+	}
+	"k4.menu.error.cannot_kick_owner"
+	{
+		"en"	"{LIGHTRED}You cannot kick the clan owner."
+		"ru"	"{LIGHTRED}Нельзя исключить владельца клана."
+	}
+	"k4.menu.error.cannot_kick_self"
+	{
+		"en"	"{LIGHTRED}You cannot kick yourself."
+		"ru"	"{LIGHTRED}Нельзя исключить себя."
+	}
+	"k4.menu.error.cannot_invite_self"
+	{
+		"en"	"{LIGHTRED}You cannot invite yourself."
+		"ru"	"{LIGHTRED}Нельзя пригласить себя."
+	}
+	"k4.menu.error.owner_cannot_leave"
+	{
+		"en"	"{LIGHTRED}The owner cannot leave the clan."
+		"ru"	"{LIGHTRED}Владелец не может покинуть клан."
+	}
+	"k4.menu.error.invite_expired"
+	{
+		"en"	"{LIGHTRED}The invite has expired."
+		"ru"	"{LIGHTRED}Приглашение истекло."
+	}
+	"k4.menu.error.invite_cooldown"
+	{
+		"en"	"{LIGHTRED}Please wait before inviting again."
+		"ru"	"{LIGHTRED}Подождите перед новым приглашением."
+	}
+	"k4.menu.error.invite_revoked"
+	{
+		"en"	"{LIGHTRED}The invite is no longer valid."
+		"ru"	"{LIGHTRED}Приглашение больше недействительно."
+	}
+	"k4.menu.error.db_unavailable"
+	{
+		"en"	"{LIGHTRED}The clan database is unavailable."
+		"ru"	"{LIGHTRED}База данных кланов недоступна."
+	}
+
+	"k4.menu.chat.joined"
+	{
+		"en"	"{LIME}You joined '{1}'."
+		"ru"	"{LIME}Вы вступили в '{1}'."
+	}
+	"k4.menu.chat.left"
+	{
+		"en"	"{GRAY}You left '{1}'."
+		"ru"	"{GRAY}Вы покинули '{1}'."
+	}
+	"k4.menu.chat.kicked_target"
+	{
+		"en"	"{LIGHTRED}You were kicked from the clan."
+		"ru"	"{LIGHTRED}Вас исключили из клана."
+	}
+	"k4.menu.chat.kicked_actor"
+	{
+		"en"	"{LIME}{1} was kicked from the clan."
+		"ru"	"{LIME}{1} исключён из клана."
+	}
+	"k4.menu.chat.invite_sent"
+	{
+		"en"	"{LIME}Invite sent."
+		"ru"	"{LIME}Приглашение отправлено."
+	}
+	"k4.menu.chat.invite_received"
+	{
+		"en"	"{LIME}{1} invites you to '{2}'."
+		"ru"	"{LIME}{1} приглашает вас в '{2}'."
+	}
+	"k4.menu.chat.invite_declined"
+	{
+		"en"	"{GRAY}Invite declined."
+		"ru"	"{GRAY}Приглашение отклонено."
+	}
+	"k4.menu.chat.disbanded"
+	{
+		"en"	"{LIGHTRED}Your clan has been disbanded."
+		"ru"	"{LIGHTRED}Ваш клан распущен."
+	}
+	"k4.menu.chat.request_sent"
+	{
+		"en"	"{LIME}Join request sent to '{1}'."
+		"ru"	"{LIME}Заявка отправлена в '{1}'."
+	}
+	"k4.menu.chat.request_cancelled"
+	{
+		"en"	"{GRAY}Join request cancelled."
+		"ru"	"{GRAY}Заявка отменена."
+	}
+	"k4.menu.chat.request_accepted"
+	{
+		"en"	"{LIME}Request accepted."
+		"ru"	"{LIME}Заявка принята."
+	}
+	"k4.menu.chat.request_declined"
+	{
+		"en"	"{GRAY}Request declined."
+		"ru"	"{GRAY}Заявка отклонена."
+	}
+	"k4.menu.chat.joined_by_request"
+	{
+		"en"	"{LIME}Your join request was accepted."
+		"ru"	"{LIME}Ваша заявка принята."
+	}
+}

@@ -1,0 +1,24 @@
+"Databases"
+{
+	// The live clans database shared with the website (clans_main, clans_players, clans_roles,
+	// clans_upgrade, clans_request, clans_logs, clans_reactions, clans_views). The plugin never
+	// creates or alters a table; it reads the site's rows and performs only the actions the old
+	// in-game plugin performed.
+	//
+	// "mysql" is required for production. "sqlite" exists for tests/offline development only and
+	// must point at a copy of the clans schema.
+	"k4_guilds"
+	{
+		"driver"		"mysql"
+
+		"host"			"127.0.0.1"
+		"port"			"3306"
+		"user"			""
+		"pass"			""
+		// Fill in the database that holds clans_main/clans_players/... (no credentials here).
+		"database"		"clans"
+
+		// SQLite only: relative paths are resolved against the plugin data directory.
+		"sqlite_path"	"k4_guilds.sqlite3"
+	}
+}
