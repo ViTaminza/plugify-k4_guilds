@@ -2,7 +2,7 @@
 
 Status: design v2 (2026-10-18), native migration v5 (2026-11-01). v1 (a full K4 port with in-game
 create/join/roles/shop) is superseded: the CS2 clan system is owned by the website module
-`.scratch/ref-k4/clans-site/module_page_clans2` (https://vcs2.ru/clans2/cs2/), and the Plugify
+`.scratch/ref-k4/clans-site/module_page_clans2`, and the Plugify
 plugin is only the **in-game runtime**.
 
 Sources:
